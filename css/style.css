@@ -1,0 +1,36 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif; /* 구글 폰트 삽입 */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh; /* 95% of viewport*/
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.801),
+      rgba(40, 180, 133, 0.801)
+    ),
+    url("../img/hero.jpg"); /* css 폴더 기준 */
+  background-size: cover; /* 뷰포트나 요소의 너비가 어떻든 box 안에 위치하도록 조정해줌*/
+  background-position: top; /* 뷰포트의 크기가 조정될 때 이미지의 상단 부분은 잘리지 않고 고정되게 세팅해줌
+  /* center, bottom 은 각각 중단, 하단에 위치하도록 해 해당 부분으로 이미지 중심이 잡히도록 만들어줌 */
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
