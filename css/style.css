@@ -1,75 +1,58 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-*,  /* Element + after, before elements are included*/
+@charset "UTF-8";
+*,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; /* 16px default */
-}
+  font-size: 62.5%;
+  /* 16px default */ }
 
 body {
-  font-family: "Lato", sans-serif; /* 구글 폰트 삽입 */
+  font-family: "Lato", sans-serif;
+  /* 구글 폰트 삽입 */
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .header {
-  height: 95vh; /* 95% of viewport*/
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.801),
-      rgba(40, 180, 133, 0.801)
-    ),
-    url("../img/hero.jpg"); /* css 폴더 기준 */
-  background-size: cover; /* 뷰포트나 요소의 너비가 어떻든 box 안에 위치하도록 조정해줌*/
-  background-position: top; /* 뷰포트의 크기가 조정될 때 이미지의 상단 부분은 잘리지 않고 고정되게 세팅해줌
+  height: 95vh;
+  /* 95% of viewport*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  /* css 폴더 기준 */
+  background-size: cover;
+  /* 뷰포트나 요소의 너비가 어떻든 box 안에 위치하도록 조정해줌*/
+  background-position: top;
+  /* 뷰포트의 크기가 조정될 때 이미지의 상단 부분은 잘리지 않고 고정되게 세팅해줌
   /* center, bottom 은 각각 중단, 하단에 위치하도록 해 해당 부분으로 이미지 중심이 잡히도록 만들어줌 */
-
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
 .header__logo {
-  height: 3.5rem;
-}
+  height: 3.5rem; }
 
 .header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
+  margin-bottom: 6rem; }
 
 .heading-primary--main {
   display: block;
@@ -79,10 +62,8 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-
   /*animation-iteration-count: 3;*/
-  /* animation-delay: 3s */
-}
+  /* animation-delay: 3s */ }
 
 .heading-primary--sub {
   display: block;
@@ -91,52 +72,35 @@ body {
   letter-spacing: 1.75rem;
   animation-name: moveInRight;
   animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
+  animation-timing-function: ease-out; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
-
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(1rem);
-  }
-
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
-  }
-
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-1rem);
-  }
-
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
-  }
-
+    transform: translateY(3rem); }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
 .btn:link,
 .btn:visited {
@@ -147,27 +111,24 @@ body {
   display: inline-block;
   transition: all 0.2s;
   position: relative;
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 
 .btn--white {
   background-color: #fff;
   color: #777;
-  border-radius: 10rem;
-}
+  border-radius: 10rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
-  content: ""; /* 가상요소 입력시 항상 content 속성은 빼먹으면 안된다. */
+  content: "";
+  /* 가상요소 입력시 항상 content 속성은 빼먹으면 안된다. */
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -176,19 +137,15 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
-}
+  transition: all 0.4s; }
 
 .btn--white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
