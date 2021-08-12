@@ -11,6 +11,7 @@
     /* center, bottom 은 각각 중단, 하단에 위치하도록 해 해당 부분으로 이미지 중심이 잡히도록 만들어줌 */
 
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
