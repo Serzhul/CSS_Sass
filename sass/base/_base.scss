@@ -1,0 +1,21 @@
+*,  /* Element + after, before elements are included*/
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 16px default */
+}
+
+body {
+  font-family: "Lato", sans-serif; /* 구글 폰트 삽입 */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
